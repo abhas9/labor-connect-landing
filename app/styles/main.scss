@@ -1,0 +1,325 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,500,600,700,800';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background: #fff none repeat scroll 0 0;
+}
+
+
+
+$blue: #72d0eb;
+$pink: #ffb3b3 ;
+$family-serif: "Raleway", sans-serif;
+
+$danger: #e67e22;
+$family-primary: $family-serif;
+$purple: #9C27B0;
+@import "bulma/bulma";
+
+p, ul {
+  margin: 0 0 15px;
+  font-family: 'Lato', sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  color: #7a7a7a;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+.fadeIn {
+  animation: fadeIn 4s;
+}
+.fadeInLeft {
+  animation: fadeInLeft 2s;
+}
+.fadeInRight {
+  animation: fadeInRight 2s;
+}
+
+#header {
+  background: url(../images/bg-1.jpg) no-repeat scroll center bottom / cover;
+  &:before {
+    background-color: #9C27B0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .title {
+    .title-part {
+      display: inline-block;
+      font-size: 7rem;
+    }
+  }
+  .title, .subtitle {
+    color: #fff;
+  }
+  .owl-carousel {
+    .image {
+      width: 300px;
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+    .image img {
+      padding: 10px;
+      width: 100%;
+      height: auto;
+
+    }
+  }
+}
+
+.is-grey {
+  background-color: #F1F1F1;
+}
+.problem {
+  text-align: center;
+  font-weight: lighter;
+  .value-prop .value-img {
+    max-width: 100px;
+  }
+}
+
+#highlight {
+  text-align: center;
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+.content-section {
+  .title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  .subtitle p {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+}
+.problem-details {
+  background: url(../images/baby.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .title {
+    color: #fff;
+  }
+  .subtitle p {
+    color: #fff;
+  }
+  ul {
+    font-size: 1.3rem;
+    margin-left: 30px;
+    li {
+      color: #fff;
+      line-height: 1.75rem;
+      font-weight: lighter;
+    }
+  }
+}
+.solution-details {
+  .subtitle {
+    text-align: center;
+  }
+  .feature-block-col {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-block-wrp {
+    margin-bottom: 20px;
+  }
+  .feature-block {
+    display: flex;
+    flex-direction: row;
+    .icon-wrp {
+      display: inline;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+    }
+    .feature-description {
+      padding-left: 20px;
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: lighter;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+}
+.icon-feature {
+  font-size: 41px;
+  height: 79px;
+  line-height: 79px;
+  width: 79px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.10);
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+  color: #666666;
+  &:hover {
+    background-color: $purple;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+  }
+}
+
+#video {
+  width: 100%;
+  height: 300px;
+  background: url(../images/alwar.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .play-wrp {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 4px solid #CCCCCC;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background: #fff;
+      border: 4px solid #fff;
+      opacity: .75;
+    }
+    a i {
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      line-height: 120px;
+      vertical-align: middle;
+      padding-left: 5px;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: rgba(0, 0, 0, .5);
+      }
+    }
+  }
+}
+
+#team {
+  text-align: center;
+  .fadeIn {
+    animation-duration: 500ms;
+  }
+  .team-member {
+    .team-member-img > img {
+      border-radius: 100%;
+      vertical-align: middle;
+      max-width: 100px;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .team-member-img:hover .social-profile {
+    background:rgba(156,39,197, .5);
+    display: block;
+    -webkit-animation: fadeIn 400ms;
+    animation: fadeIn 400ms;
+    -webkit-transition: all 0.9s ease;
+    -moz-transition: all 0.9s ease;
+    -ms-transition: all 0.9s ease;
+    -o-transition: all 0.9s ease;
+    transition: all 0.9s ease;
+  }
+  .social-profile {
+    background: none repeat scroll 0 0 rgba(0, 128, 255, 0.5);
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  .social-profile ul {
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    top: 40%;
+  }
+  .social-profile ul li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .social-profile ul li a {
+    text-align: center;
+  }
+  .team-member-img {
+    margin: 0px auto;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    overflow: hidden;
+  }
+}
