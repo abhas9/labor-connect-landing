@@ -103,6 +103,9 @@ p, ul {
     .title-part {
       display: inline-block;
       font-size: 7rem;
+      @media screen and (max-width: 768px) {
+        font-size: 3rem;
+      }
     }
   }
   .title, .subtitle {
